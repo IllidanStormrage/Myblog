@@ -7,7 +7,7 @@
 	<title>Laravel</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('/css/mynew.css') }}" rel="stylesheet">
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 
@@ -28,13 +28,30 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Laravel</a>
-			</div>
+				<a class="navbar-brand" href="#">A\mer's Arch</a>
+        </div>
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><a href="{{ url('/') }}">Home</a></li>
+                <ul class="nav navbar-nav">
+                    <li><a  href="{{URL('/')}}"><img src="{{URL('/picture/myBlogPicture.jpg')}}" alt="" style="width: 50px; height: 50px></a></li>
+                    {{--地址重写1--}}
+                </ul>
+                <ul class="nav navbar-nav">
+					<li><a href="{{ url('/blog') }}">Home</a></li>
+                   {{--地址重写1--}}
 				</ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/home') }}">Archive</a></li>
+                    {{--地址重写2--}}
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/admin') }}">Amdin</a></li>
+                    {{--地址重写3--}}
+                </ul>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url('/AboutMe') }}">About Me</a></li>
+                    {{--地址重写3--}}
+                </ul>
 
 				<ul class="nav navbar-nav navbar-right">
 					@if (Auth::guest())
@@ -49,6 +66,15 @@
 						</li>
 					@endif
 				</ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form action="{{ URL('/') }}" class="navbar-form navbar-right" role="search">
+                        {{--重写地址4--}}
+                        <div class="form-group">
+                            <input type="text" name="kw" class="form-control" placeholder="关键字" />
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </ul>
 			</div>
 		</div>
 	</nav>

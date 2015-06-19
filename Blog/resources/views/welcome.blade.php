@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Laravel</title>
-		
+
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 		<style>
@@ -33,15 +33,18 @@
 			}
 
 			.quote {
-				font-size: 24px;
+				font-size: 28px;
+
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
+				<div class="title">A\mer's Arch</div>
+				<div class="quote">We are all in the gutter , but some of us are looking at the stars .</div>
+                <a class="title" href="{{ URL('/blog') }}">JOIN IN</a>
+                {{--重写地址到主页--}}
 			</div>
 		</div>
 	</body>
